@@ -10,26 +10,22 @@ import UIKit
 
 class PageViewController: UIPageViewController {
 
+    var vc: [UIViewController] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
+        for index in 0...11 {
+            let transformVC = storyboard?.instantiateViewController(withIdentifier: "transform")
+            transformVC?.restorationIdentifier = String(index)
+            vc.append(transformVC!)
+        }
+
+        self.setViewControllers([vc[0]], direction: .forward, animated: true, completion: nil)
 
         self.dataSource = self
     }
 
-    func getFirst() -> FirstViewController {
-        return storyboard!.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
-    }
-
-    func getSecond() -> SecondViewController {
-        return storyboard!.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-    }
-
-    func getThird() -> ThirdViewController {
-        return storyboard!.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,23 +47,27 @@ class PageViewController: UIPageViewController {
 extension PageViewController : UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 
-        if viewController.isKind(of: FirstViewController.self) {
-            return getSecond()
-        } else if viewController.isKind(of: SecondViewController.self) {
-            return getThird()
+        guard let index = Int(viewController.restorationIdentifier!) else {
+            return vc[0]
+        }
+
+        if index == vc.count - 1 {
+            return vc[0]
         } else {
-            return getFirst()
+            return vc[index+1]
         }
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 
-        if viewController.isKind(of: FirstViewController.self) {
-            return getThird()
-        } else if viewController.isKind(of: SecondViewController.self) {
-            return getFirst()
+        guard let index = Int(viewController.restorationIdentifier!) else {
+            return vc[vc.count - 1]
+        }
+
+        if index == 0 {
+            return vc[vc.count - 1]
         } else {
-            return getSecond()
+            return vc[index - 1]
         }
     }
 }

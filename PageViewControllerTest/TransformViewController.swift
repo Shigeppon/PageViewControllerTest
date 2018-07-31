@@ -1,14 +1,14 @@
 //
-//  ThirdViewController.swift
+//  TransformViewController.swift
 //  PageViewControllerTest
 //
-//  Created by Shigeo Sakamoto on 2018/07/30.
+//  Created by Shigeo Sakamoto on 2018/07/31.
 //  Copyright © 2018年 Shigeo Sakamoto. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class TransformViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,9 @@ class ThirdViewController: UIViewController {
         let screenWidth = view.bounds.width
         let screenHeight = view.bounds.height
 
-        let draw = ThirdDraw(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        let draw = TransformDraw(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        draw.totalView = (parent as! PageViewController).vc.count
+        draw.currentView = Int(self.restorationIdentifier!)!
         view.addSubview(draw)
     }
 

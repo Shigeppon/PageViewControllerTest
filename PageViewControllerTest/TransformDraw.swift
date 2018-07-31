@@ -1,21 +1,24 @@
 //
-//  SecondDraw.swift
+//  TransformDraw.swift
 //  PageViewControllerTest
 //
-//  Created by Shigeo Sakamoto on 2018/07/30.
+//  Created by Shigeo Sakamoto on 2018/07/31.
 //  Copyright © 2018年 Shigeo Sakamoto. All rights reserved.
 //
 
 import UIKit
 
-class SecondDraw: UIView {
+class TransformDraw: UIView {
+    var totalView: Int = 0
+    var currentView: Int = 0
 
     override func draw(_ rect: CGRect) {
+        print(currentView, totalView)
         let startAngle = (-1/2) * CGFloat(Double.pi) - CGFloat(Double.pi) / 12
         let diffAngle = CGFloat(Double.pi) / 6
         var colors: [UIColor] = []
 
-        let sat = 0.6
+        let sat = 1 - Float(currentView) / Float(totalView)
         let bri = 0.8
         let alp = 1.0
         let centerX = self.bounds.width / 2
