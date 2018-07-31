@@ -12,7 +12,12 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let screenWidth = view.bounds.width
+        let screenHeight = view.bounds.height
+
+        let draw = FirstDraw(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        view.addSubview(draw)
     }
 
     override func didReceiveMemoryWarning() {

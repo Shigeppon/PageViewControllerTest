@@ -15,6 +15,9 @@
 		8DAF934E210F3955000CB32B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF934D210F3955000CB32B /* PageViewController.swift */; };
 		8DAF9350210F3FF3000CB32B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF934F210F3FF3000CB32B /* SecondViewController.swift */; };
 		8DAF9352210F4001000CB32B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF9351210F4001000CB32B /* ThirdViewController.swift */; };
+		8DAF9354210F4CBC000CB32B /* FirstDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF9353210F4CBC000CB32B /* FirstDraw.swift */; };
+		8DAF9356210F4E22000CB32B /* SecondDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF9355210F4E22000CB32B /* SecondDraw.swift */; };
+		8DAF9358210F4E30000CB32B /* ThirdDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF9357210F4E30000CB32B /* ThirdDraw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		8DAF934D210F3955000CB32B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		8DAF934F210F3FF3000CB32B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8DAF9351210F4001000CB32B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		8DAF9353210F4CBC000CB32B /* FirstDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDraw.swift; sourceTree = "<group>"; };
+		8DAF9355210F4E22000CB32B /* SecondDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDraw.swift; sourceTree = "<group>"; };
+		8DAF9357210F4E30000CB32B /* ThirdDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDraw.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 			children = (
 				8DAF933B210F3717000CB32B /* AppDelegate.swift */,
 				8DAF933D210F3717000CB32B /* FirstViewController.swift */,
+				8DAF9353210F4CBC000CB32B /* FirstDraw.swift */,
+				8DAF9355210F4E22000CB32B /* SecondDraw.swift */,
+				8DAF9357210F4E30000CB32B /* ThirdDraw.swift */,
 				8DAF934F210F3FF3000CB32B /* SecondViewController.swift */,
 				8DAF9351210F4001000CB32B /* ThirdViewController.swift */,
 				8DAF933F210F3717000CB32B /* Main.storyboard */,
@@ -147,7 +156,10 @@
 				8DAF9350210F3FF3000CB32B /* SecondViewController.swift in Sources */,
 				8DAF934E210F3955000CB32B /* PageViewController.swift in Sources */,
 				8DAF9352210F4001000CB32B /* ThirdViewController.swift in Sources */,
+				8DAF9358210F4E30000CB32B /* ThirdDraw.swift in Sources */,
+				8DAF9354210F4CBC000CB32B /* FirstDraw.swift in Sources */,
 				8DAF933E210F3717000CB32B /* FirstViewController.swift in Sources */,
+				8DAF9356210F4E22000CB32B /* SecondDraw.swift in Sources */,
 				8DAF933C210F3717000CB32B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
